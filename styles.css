@@ -1,0 +1,154 @@
+:root {
+    --bg: #0a0a0a;
+    --fg: #e0e0e0;
+    --dim: #777;
+    --border: #333;
+    --accent: #ff0055;
+    --protox: #ffcc00;
+    --link: #4488ff;
+    --safe: #51cf66;
+    --panel-bg: #111;
+    --button-bg: #0e0e0e;
+    --button-bg-hover: #161616;
+    --button-border: #444;
+    --button-border-hover: #666;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: Consolas, monospace;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.limit {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 25px;
+    color: #ccc;
+    text-align: left;
+}
+
+.link {
+    color: var(--link);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color var(0.2), border-color var(0.2);
+}
+
+.link:hover {
+    border-bottom-color: var(--link);
+}
+
+.protox-highlight {
+    color: var(--protox);
+    font-size: 1.1em;
+}
+
+.protox-highlight:hover {
+    color: var(--protox);
+    border-bottom-color: var(--protox);
+}
+
+.alert-box {
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 15px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-weight: bold;
+}
+
+#test-result,
+#showcase-result {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+button {
+    width: 90%;
+    margin-top: 20px;
+    padding: 12px 34px;
+    font: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: var(--button-bg);
+    color: #cfcfcf;
+    border: 1px solid var(--button-border);
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--button-bg-hover);
+    border-color: var(--button-border-hover);
+    color: #fff;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+#showcase-button:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.test-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px dashed var(--border);
+}
+
+.check-text {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 2px solid var(--border);
+    color: var(--dim);
+    font-size: 14px;
+    text-transform: uppercase;
+}

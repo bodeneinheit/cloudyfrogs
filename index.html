@@ -3,11 +3,97 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>cloudyfrogs.com</title>
+    <title>cloudyfrogs.com // abandoned</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
+
 <body>
-<h1 class="top-banner">
-    THIS IS NOT A <a href="https://kirka.io" target="_blank">KIRKA.IO</a> PROXY URL ANYMORE
-</h1>
+<div class="limit">
+    <header>
+        <div class="left">
+            <a href="https://github.com/bodeneinheit/cloudyfrogs" target="_blank" class="link">GITHUB REPO&nearr;</a>
+        </div>
+        <div class="center">
+            <time datetime="2026-01-30">30 JAN 2026</time>
+        </div>
+        <div class="right">
+            <a href="https://protox.io" target="_blank" class="link protox-highlight">PROTOX.IO&nearr;</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="alert-box" role="alert">CLOUDYFROGS.COM IS NOT A KIRKA.IO PROXY ANYMORE</div>
+
+        <h2>What is this?</h2>
+
+        <p>
+            This domain used to be a proxy URL for Kirka. It expired last year and remained unregistered
+            until now (January 2026).
+        </p>
+
+        <p>
+            While recently looking into Kirka clients and their safety, I noticed an issue most of them share: the Kirka
+            webpage is loaded with Electrons nodeIntegration enabled. This means the webpage can access Node.js
+            directly. This allows the webpage to execute Node.js code on the users machine, including reading files,
+            deleting files and installing software.
+        </p>
+
+        <p>
+            This becomes dangerous if XSS vulnerabilities are found or if the Kirka domain/a proxy domain
+            themselves serve malicious code. There are many potential ways for this to happen, for example if a domain
+            is taken over or if a domain is abandoned and the new owners have malicious intentions. In any of those
+            cases, bad actors are able to gain system access if a user sets their proxy URL to the one
+            taken over and then loads the now malicious webpage.
+        </p>
+
+        <p>
+            Cloudyfrogs.com was still an option in multiple Kirka clients, meaning anyone could have
+            registered this domain and hosted malicious code for nearly a year. To mitigate this issue in the
+            future, proxy domains should not be silently dropped and clients should not expose Node to untrusted remote
+            content. <br/>
+            <strong>See the Electron documentation:</strong>
+            <a href="https://www.electronjs.org/docs/latest/tutorial/security#isolation-for-untrusted-content"
+               target="_blank" class="link">Isolation for untrusted content</a>. <br/>
+            <i>"Under no circumstances should you load and execute remote code with Node.js integration enabled."</i>
+        </p>
+
+        <p>
+            <strong>What can you do as a User?</strong><br/>
+            If you want to be safe, do not use a client with Node integration enabled. At the time of writing
+            Redline Client is the only client I can personally recommend.
+        </p>
+
+        <div class="test-section">
+            <div class="test-card">
+                <h2>VULNERABILITY CHECK</h2>
+                <p class="check-text">
+                    Non-invasive test. Checks if require() is exposed. <br><br>
+                </p>
+                <button id="test-button" type="button">Run Check</button>
+                <div id="test-result"></div>
+            </div>
+
+            <div class="test-card">
+                <h2>RCE SHOWCASE</h2>
+                <p class="check-text">
+                    <strong>Windows Only:</strong> Demonstrates RCE by writing an example file and executing it.
+                </p>
+                <button id="showcase-button" type="button">Run Showcase</button>
+                <div id="showcase-result"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-left">
+            My GitHub: <a href="https://github.com/bodeneinheit" class="link">@bodeneinheit&nearr;</a>
+        </div>
+        <div class="footer-right">
+            Check out <a href="https://protox.io" target="_blank" class="link protox-highlight">PROTOX.IO&nearr;</a>, a
+            game I am working on :)
+        </div>
+    </footer>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
