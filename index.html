@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>cloudyfrogs.com // abandoned</title>
+    <title>cloudyfrogs.com - a writeup</title>
     <link rel="stylesheet" href="styles.css"/>
 </head>
 
@@ -33,9 +33,9 @@
 
         <p>
             While recently looking into Kirka clients and their safety, I noticed an issue most of them share: the Kirka
-            webpage is loaded with Electrons nodeIntegration enabled. This means the webpage can access Node.js
-            directly. This allows the webpage to execute Node.js code on the users machine, including reading files,
-            deleting files and installing software.
+            webpage is loaded with Electrons nodeIntegration enabled and contextIsolation disabled. This means the
+            webpage can access Node.js directly. This allows the webpage to execute Node.js code on the users machine,
+            including reading files, deleting files and installing software.
         </p>
 
         <p>
@@ -59,8 +59,8 @@
 
         <p>
             <strong>What can you do as a User?</strong><br/>
-            If you want to be safe, do not use a client with Node integration enabled. At the time of writing
-            Redline Client is the only client I can personally recommend.
+            If you want to be safe, do not use a client with nodeIntegration enabled and contextIsolation disabled. At
+            the time of writing Redline Client is the only client I can personally recommend.
         </p>
 
         <div class="test-section">
