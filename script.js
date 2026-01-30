@@ -42,7 +42,7 @@ document.getElementById("showcase-button").addEventListener("click", () => {
         exec(`start cmd /k "${temp}"`);
 
         resultDiv.innerHTML = `
-            <strong style="color: #ff0055">VULNERABLE</strong><br>
+            <strong style="color: #ff0055">VULNERABLE</strong>:<br>
             A command prompt should have opened.<br>
             User: ${os.userInfo().username}<br>
             Hostname: ${os.hostname()}
